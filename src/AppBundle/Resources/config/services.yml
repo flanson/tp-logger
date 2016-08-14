@@ -6,3 +6,7 @@ services:
         class: AppBundle\Services\Exercise1Service
         arguments:
             - '@request_stack'
+
+    exercise2.service:
+        class: AppBundle\Services\Exercise2Service
+

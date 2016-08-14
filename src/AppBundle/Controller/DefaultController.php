@@ -13,7 +13,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        // replace this example code with whatever you need
+        //@TODO change Index page with link to each exercises
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
@@ -26,7 +26,6 @@ class DefaultController extends Controller
     {
         $exercise1Service = $this->get('exercise1.service');
         $totoQueryString = $exercise1Service->getTotoQueryString();
-        // replace this example code with whatever you need
         return $this->render('default/exercise-1.html.twig', [
             'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
         ]);
@@ -37,8 +36,42 @@ class DefaultController extends Controller
      */
     public function exerciseTwoAction()
     {
+        $exercise1Service = $this->get('exercise1.service');
+        $totoQueryString = $exercise1Service->getTotoQueryString();
+        return $this->render('default/exercise-2.html.twig', [
+            'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
+        ]);
+    }
+
+    /**
+     * @Route("/exercise-3", name="exercise_3")
+     */
+    public function exerciseThreeAction()
+    {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
+        return $this->render('default/exercise-1.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+        ]);
+    }
+
+    /**
+     * @Route("/exercise-4", name="exercise_4")
+     */
+    public function exerciseFourAction()
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/exercise-1.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+        ]);
+    }
+
+    /**
+     * @Route("/exercise-5", name="exercise_5")
+     */
+    public function exerciseFiveAction()
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/exercise-1.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }

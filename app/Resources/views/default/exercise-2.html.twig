@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div id="container">
             <div id="welcome">
-                <h1><span>Welcome to</span> Exercise 1</h1>
+                <h1><span>Welcome to</span> Exercise 2</h1>
             </div>
 
             <div id="next">
@@ -12,9 +12,12 @@
                     In this exercise, you must :
                 </p>
                 <ul>
-                    <li>Add a logger to the <code>Exercise1Service.php</code></li>
-                    <li>Log a record with an <code>error</code> level and with the url in the context</li>
-                    <li>Configure the logger to log in <code>channel_ex1</code></li>
+                    <li>Create a Proccessor <code>MachineNameProcessor.php</code> that add the <code>machine name</code> to a record
+                        <ul>
+                            <li>Use the <code>Exercise2Service.php</code> service to get the <code>machine name</code></li>
+                        </ul>
+                    </li>
+                    <li>Associate the processor to the previous <code>channel_ex1</code></li>
                 </ul>
             </div>
             <div id="status">
@@ -60,9 +63,9 @@
                             c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
                     </svg>
 
-                    Read the README.md to learn about exercise 2 or directly go to
-                    <a href="{{ path('exercise_2') }}">
-                        Exercise 2
+                    Read the README.md to learn about exercise 3 or directly go to
+                    <a href="{{ path('exercise_3') }}">
+                        Exercise 3
                     </a>
                 </p>
             </div>
