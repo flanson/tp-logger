@@ -12,23 +12,23 @@ web_profiler:
     intercept_redirects: false
 
 monolog:
+    channels: ['channel_ex1']
     handlers:
         main:
-            type: stream
-            path: "%kernel.logs_dir%/%kernel.environment%.log"
-            level: debug
-            channels: [!event]
-        console:
-            type:   console
-            channels: [!event, !doctrine]
-        # uncomment to get logging in your browser
-        # you may have to allow bigger header sizes in your Web server configuration
-        #firephp:
-        #    type:   firephp
-        #    level:  info
-        #chromephp:
-        #    type:   chromephp
-        #    level:  info
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+        nested:
+            type: rotating_file
+            max_files: 3
+            path:   "%kernel.logs_dir%/%kernel.environment%.log"
+            level:  error
+        second:
+            type: rotating_file
+            max_files: 3
+            path:   "%kernel.logs_dir%/channel_ex1/%kernel.environment%.log"
+            level:  error
+            channels: ['channel_ex1']
 
 #swiftmailer:
 #    delivery_address: me@example.com

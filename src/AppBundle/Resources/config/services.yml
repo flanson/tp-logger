@@ -1,0 +1,8 @@
+parameters:
+    # None
+
+services:
+    exercise1.service:
+        class: AppBundle\Services\Exercise1Service
+        arguments:
+            - '@request_stack'
