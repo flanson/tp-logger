@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div id="container">
             <div id="welcome">
-                <h1><span>Welcome to</span> Exercise 2</h1>
+                <h1><span>Welcome to</span> Exercise 4</h1>
             </div>
 
             <div id="next">
@@ -12,12 +12,14 @@
                     In this exercise, you must :
                 </p>
                 <ul>
-                    <li>Create a Proccessor <code>MachineNameProcessor.php</code> that add the <code>machine name</code> to a record
+                    <li>Create a formatter <code>LeetFormatter.php</code> that format the message in leet
                         <ul>
-                            <li>Use the <code>exercise2.service</code> service to get the <code>machine name</code></li>
+                            <li>Use the <code>exercise4.service</code> service to transform text into leet</li>
+                            <li>The name of the transform function must be <code>gattai</code></li>
                         </ul>
                     </li>
-                    <li>Associate the processor to the previous <code>channel_ex1</code></li>
+                    <li>Register the formatter in symfony service as <code>formatter.leet</code></li>
+                    <li>Link the formatter to the <code>exercise4</code> handler</li>
                 </ul>
             </div>
             <div id="status">
@@ -63,9 +65,9 @@
                             c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
                     </svg>
 
-                    Read the README.md to learn about exercise 3 or directly go to
-                    <a href="{{ path('exercise_3') }}">
-                        Exercise 3
+                    Read the README.md to learn about exercise 5 or directly go to
+                    <a href="{{ path('exercise_5') }}">
+                        Exercise 5
                     </a>
                 </p>
             </div>
