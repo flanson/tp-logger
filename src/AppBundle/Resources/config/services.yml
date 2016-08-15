@@ -10,3 +10,6 @@ services:
     exercise2.service:
         class: AppBundle\Services\Exercise2Service
 
+    exercise3.service:
+        class: AppBundle\Services\Exercise3Service
+
