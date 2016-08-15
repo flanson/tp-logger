@@ -34,6 +34,9 @@ monolog:
             max_files: 1
             path:   "%kernel.logs_dir%/channel_ex4/%kernel.environment%.log"
             level:  error
+        exercise5:
+            type: rotating_file
+            max_files: 1
+            path:   "%kernel.logs_dir%/channel_ex5/%kernel.environment%.log"
+            level:  error
 
-#swiftmailer:
-#    delivery_address: me@example.com

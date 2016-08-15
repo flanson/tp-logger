@@ -71,9 +71,9 @@ class DefaultController extends Controller
      */
     public function exerciseFiveAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('default/exercise-1.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+        $totoQueryString = '';
+        return $this->render('default/exercise-5.html.twig', [
+            'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
         ]);
     }
 }
