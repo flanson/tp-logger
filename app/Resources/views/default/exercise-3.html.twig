@@ -12,11 +12,18 @@
                     In this exercise, you must :
                 </p>
                 <ul>
-                    <li>Create an handler <code>ForgetFullHandler.php</code> that forget Half of the log and put them back later in reverse order
+                    <li>Create an handler <code>ForgetFullHandler.php</code> that forget 2 out of 3 log and put them back later in reverse order
                         <ul>
-                            <li>Use the <code>exercise3.service</code> service to store and load the records</li>
-                            {#<li>Use the <code>Exercise3Service.php</code> service to store and load the records</li>#}
-                            {#<li>Use the <code>Exercise3Service.php</code> service to store and load the records</li>#}
+                            <li>Thus instead of having 1,2,3,4,5,6,7,8,9,10, you must have 3,2,1,6,5,4,9,8,7</li>
+                            <li>For a quick exercise base your handler on <code>RotatingFileHandler.php</code> and override the right methods</li>
+                            <li>Only <code>info</code> level message and only message NOT from <code>channel_ex1, channel_ex2, channel_ex4, channel_ex5, request, security</code> channels will be handled</li>
+                            <li>Hint : you can directly override the <code>write</code> function</li>
+                        </ul>
+                    </li>
+                    <li>Define the service
+                        <ul>
+                            <li>Configure the output file to <code>/var/logs/channel_ex3/{{ app.environment }}.log</code></li>
+                            <li>Limit rotation to 1 file</li>
                         </ul>
                     </li>
                     <li>Register the handler in the application</li>
@@ -37,11 +44,9 @@
                             {#<path d="M-39.832419467083525,-30.43299173136773l-3.7250000000000014,-3.7250000000000014c-0.625,-0.625,-1.875,0.625,-1.25,1.25l2.5,2.5l-2.5,2.5c-0.625,0.625,0.625,1.875,1.25,1.25l3.7250000000000014,-3.7250000000000014Z" stroke="#759E1A" id="e4_shape" style="vector-effect: non-scaling-stroke; stroke-width: 1px;" transform="matrix(-9.82854 -0.0257937 0.0257937 -9.82854 -151.424 -96.6803)" fill="#759E1A"></path>#}
                         {#</g>#}
                     {#</svg>#}
-
-                    Please write a query string in toto : ?toto=Test
                 </p>
-                <div><code>{{ toto_query_String }}</code></div>
-                <p>Check if the record was written in <code>/var/logs/channel_ex1/{{ app.environment }}.log</code></p>
+                <p>Check if the record was written in <code>/var/logs/channel_ex3/{{ app.environment }}.log</code></p>
+                <p>or check in the profiler</p>
             </div>
 
             {# TODO : check if result is ok and show next step only if ok #}

@@ -14,11 +14,9 @@ class Exercise2Service
     {
         $remote_addr = $_SERVER['REMOTE_ADDR'];
         $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-        $hostIp = $_SERVER['HTTP_CLIENT_IP'];
         $machineName = [
             'remote' => $remote_addr,
             'hostname' => $hostname,
-            'ip' => $hostIp,
         ];
         return $machineName;
     }

@@ -36,12 +36,16 @@ monolog:
             path:   "%kernel.logs_dir%/channel_ex2/%kernel.environment%.log"
             level:  error
             channels: ['channel_ex2']
+        exercise3:
+            type: service
+            id: 'handler.forgetfull'
         exercise4:
             type: rotating_file
             max_files: 1
             path:   "%kernel.logs_dir%/channel_ex4/%kernel.environment%.log"
             level:  error
             channels: ['channel_ex4']
+            formatter: formatter.leet
         exercise5:
             type: rotating_file
             max_files: 1

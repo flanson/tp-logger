@@ -1,0 +1,7 @@
+services:
+    exercice2.processor:
+        class: AppBundle\Services\MachineNameProcessor
+        arguments:
+            - '@exercise2.service'
+        tags:
+            - { name: monolog.processor, method: gattai, channel: 'channel_ex2' }

@@ -36,10 +36,9 @@ class DefaultController extends Controller
      */
     public function exerciseTwoAction()
     {
-        $exercise1Service = $this->get('exercise1.service');
-        $totoQueryString = $exercise1Service->getTotoQueryString();
+        $exercise2Service = $this->get('exercise2.fakelog');
+        $exercise2Service->createFakeErrorLog();
         return $this->render('default/exercise-2.html.twig', [
-            'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
         ]);
     }
 
@@ -48,10 +47,9 @@ class DefaultController extends Controller
      */
     public function exerciseThreeAction()
     {
-        $exercise1Service = $this->get('exercise1.service');
-        $totoQueryString = $exercise1Service->getTotoQueryString();
+        $exercise3Service = $this->get('exercise3.fakelog');
+        $exercise3Service->createFakeLogs();
         return $this->render('default/exercise-3.html.twig', [
-            'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
         ]);
     }
 
@@ -60,9 +58,9 @@ class DefaultController extends Controller
      */
     public function exerciseFourAction()
     {
-        $totoQueryString = '';
+        $exercise4Service = $this->get('exercise4.fakelog');
+        $exercise4Service->createFakeErrorLog();
         return $this->render('default/exercise-4.html.twig', [
-            'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
         ]);
     }
 
@@ -71,9 +69,9 @@ class DefaultController extends Controller
      */
     public function exerciseFiveAction()
     {
-        $totoQueryString = '';
+        $exercise5Service = $this->get('exercise5.fakelog');
+        $exercise5Service->createFakeErrorLog();
         return $this->render('default/exercise-5.html.twig', [
-            'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
         ]);
     }
 }

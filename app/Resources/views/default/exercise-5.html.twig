@@ -12,7 +12,13 @@
                     In this exercise, you must :
                 </p>
                 <ul>
-                    <li>Associate the <code>MachineNameProcessor.php</code> processor to <code></code> handler</li>
+                    <li>Associate a new <code>GitProcessor.php</code> from Monolog to <code>exercise5</code> handler
+                        <ul>
+                            <li>Hint : Create a service based on the class <code>GitProcessor.php</code></li>
+                            <li>Hint : associate the processor in config.yml or directly in service.yml</li>
+                        </ul>
+                    </li>
+                    <li>Associate <code>MachineNameProcessor.php</code> from <a href="{{ path('homepage') }}">exercise 2</a> to <code>exercise5</code> handler</li>
                 </ul>
             </div>
             <div id="status">
@@ -30,11 +36,8 @@
                             {#<path d="M-39.832419467083525,-30.43299173136773l-3.7250000000000014,-3.7250000000000014c-0.625,-0.625,-1.875,0.625,-1.25,1.25l2.5,2.5l-2.5,2.5c-0.625,0.625,0.625,1.875,1.25,1.25l3.7250000000000014,-3.7250000000000014Z" stroke="#759E1A" id="e4_shape" style="vector-effect: non-scaling-stroke; stroke-width: 1px;" transform="matrix(-9.82854 -0.0257937 0.0257937 -9.82854 -151.424 -96.6803)" fill="#759E1A"></path>#}
                         {#</g>#}
                     {#</svg>#}
-
-                    Please write a query string in toto : ?toto=Test
                 </p>
-                <div><code>{{ toto_query_String }}</code></div>
-                <p>Check if the record was written in <code>/var/logs/channel_ex1/{{ app.environment }}.log</code></p>
+                <p>Check if the record was written in <code>/var/logs/channel_ex5/{{ app.environment }}.log</code></p>
             </div>
 
             {# TODO : check if result is ok and show next step only if ok #}
@@ -58,7 +61,7 @@
                             c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
                     </svg>
 
-                    All done! Return to the home
+                    Congratulation ! You've succeed the last exercise. You can now return to the home
                     <a href="{{ path('homepage') }}">
                         Home page
                     </a>

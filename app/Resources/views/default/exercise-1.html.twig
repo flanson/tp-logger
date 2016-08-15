@@ -13,13 +13,17 @@
                 </p>
                 <ul>
                     <li>Add a logger to the <code>exercise1.service</code></li>
-                    <li>Log a record with an <code>error</code> level and with the url in the context</li>
+                    <li>Log a record with an <code>error</code> level and with the url in the context
+                        <ul>
+                            <li>The message will be <code>This is an error message for the exercise 1</code></li>
+                            <li>The context will be <code>['totoQueryString' => $totoQueryString]</code></li>
+                        </ul>
+                    </li>
                     <li>Configure the logger to log in <code>channel_ex1</code></li>
                 </ul>
             </div>
             <div id="status">
                 <p>
-                    <svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/></svg>
                     {#<svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">#}
                         {#<path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/>#}
                         {#<path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A" transform='rotate(45 32 32)'/>#}
@@ -33,10 +37,12 @@
                         {#</g>#}
                     {#</svg>#}
 
-                    Please write a query string in toto : ?toto=Test
+                    Please write the following query string to validate exercise : <a href="{{ path('exercise_1', { 'toto' : 'Test'}) }}">?toto=Test</a>
                 </p>
-                <div><code>{{ toto_query_String }}</code></div>
+                <div>Query string in <code>toto</code> : <code>{{ toto_query_String }}</code></div>
+                <svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/></svg>
                 <p>Check if the record was written in <code>/var/logs/channel_ex1/{{ app.environment }}.log</code></p>
+                <p>or check in the profiler</p>
             </div>
 
             {# TODO : check if result is ok and show next step only if ok #}

@@ -1,0 +1,8 @@
+services:
+    exercise1.service:
+        class: AppBundle\Services\Exercise1Service
+        arguments:
+            - '@request_stack'
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: channel_ex1 }

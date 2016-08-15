@@ -6,6 +6,7 @@ Exercises are base on the presentation. (not yet available)
 
 # Initialisation
 
+Composer update (make instal / make start) 
 In order to test the project run the following command in a shell 
 ```bash
 php bin/console server:run

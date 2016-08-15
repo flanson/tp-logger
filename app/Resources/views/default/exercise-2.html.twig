@@ -12,12 +12,13 @@
                     In this exercise, you must :
                 </p>
                 <ul>
-                    <li>Create a Proccessor <code>MachineNameProcessor.php</code> that add the <code>machine name</code> to a record
+                    <li>Create a Processor <code>MachineNameProcessor.php</code> that add the <code>machine name</code> to a record
                         <ul>
                             <li>Use the <code>exercise2.service</code> service to get the <code>machine name</code></li>
+                            <li>The name of the process function must be <code>gattai</code></li>
                         </ul>
                     </li>
-                    <li>Associate the processor to the previous <code>channel_ex1</code></li>
+                    <li>Associate the processor to the <code>channel_ex2</code> channel</li>
                 </ul>
             </div>
             <div id="status">
@@ -35,11 +36,9 @@
                             {#<path d="M-39.832419467083525,-30.43299173136773l-3.7250000000000014,-3.7250000000000014c-0.625,-0.625,-1.875,0.625,-1.25,1.25l2.5,2.5l-2.5,2.5c-0.625,0.625,0.625,1.875,1.25,1.25l3.7250000000000014,-3.7250000000000014Z" stroke="#759E1A" id="e4_shape" style="vector-effect: non-scaling-stroke; stroke-width: 1px;" transform="matrix(-9.82854 -0.0257937 0.0257937 -9.82854 -151.424 -96.6803)" fill="#759E1A"></path>#}
                         {#</g>#}
                     {#</svg>#}
-
-                    Please write a query string in toto : ?toto=Test
                 </p>
-                <div><code>{{ toto_query_String }}</code></div>
-                <p>Check if the record was written in <code>/var/logs/channel_ex1/{{ app.environment }}.log</code></p>
+                <p>Check that written record in <code>/var/logs/channel_ex2/{{ app.environment }}.log</code> contain machine name in context</p>
+                <p>or check in the profiler</p>
             </div>
 
             {# TODO : check if result is ok and show next step only if ok #}

@@ -1,3 +1,6 @@
+imports:
+    - { resource: validation-services.yml }
+
 parameters:
     # None
 
@@ -10,9 +13,5 @@ services:
     exercise2.service:
         class: AppBundle\Services\Exercise2Service
 
-    exercise3.service:
-        class: AppBundle\Services\Exercise3Service
-
     exercise4.service:
         class: AppBundle\Services\Exercise4Service
-

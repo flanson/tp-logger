@@ -1,0 +1,5 @@
+services:
+    formatter.leet:
+        class: AppBundle\Services\LeetFormatter
+        arguments:
+            - '@exercise4.service'

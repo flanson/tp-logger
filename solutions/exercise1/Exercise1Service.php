@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Services;
+namespace Solutions\AppBundle\Services;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
@@ -38,12 +38,8 @@ class Exercise1Service
     {
         $request = $this->requestStack->getCurrentRequest();
         $totoQueryString = $request->get('toto');
-        if ($totoQueryString) {
-            $this->logger->error(
-                'This is an error message for the exercise 1',
-                ['totoQueryString' => $totoQueryString]
-            );
-        }
         return $totoQueryString;
     }
+
+
 }
