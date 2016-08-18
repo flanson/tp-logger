@@ -25,7 +25,7 @@ class DefaultController extends Controller
     public function exerciseOneAction()
     {
         $exercise1Service = $this->get('exercise1.service');
-        $totoQueryString = $exercise1Service->getTotoQueryString();
+        $totoQueryString = $exercise1Service->getFooQueryString();
         return $this->render('default/exercise-1.html.twig', [
             'toto_query_String' => $totoQueryString ? $totoQueryString : 'No query String Found',
         ]);

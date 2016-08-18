@@ -34,11 +34,17 @@ class Exercise1Service
     /**
      * @return string
      */
-    public function getTotoQueryString()
+    public function getFooQueryString()
     {
         $request = $this->requestStack->getCurrentRequest();
-        $totoQueryString = $request->get('toto');
-        return $totoQueryString;
+        $fooQueryString = $request->get('foo');
+        if ($fooQueryString) {
+            $this->logger->error(
+                'This is an error message for the exercise 1',
+                ['fooQueryString' => $fooQueryString]
+            );
+        }
+        return $fooQueryString;
     }
 
 
