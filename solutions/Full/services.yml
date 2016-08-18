@@ -1,0 +1,51 @@
+imports:
+    - { resource: validation-services.yml }
+
+parameters:
+    # None
+
+services:
+    exercise1.service:
+        class: AppBundle\Services\Exercise1Service
+        arguments:
+            - '@request_stack'
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: channel_ex1 }
+
+    exercise2.service:
+        class: AppBundle\Services\Exercise2Service
+
+    exercise4.service:
+        class: AppBundle\Services\Exercise4Service
+
+    handler.forgetfull:
+        class: AppBundle\Services\ForgetFullHandler
+        arguments:
+            - "%kernel.logs_dir%/channel_ex3/%kernel.environment%.log"
+            - 1
+
+    exercice2.processor2:
+        class: AppBundle\Services\MachineNameProcessor
+        arguments:
+            - '@exercise2.service'
+        tags:
+            - { name: monolog.processor, method: gattai, channel: 'channel_ex2' }
+
+    formatter.leet:
+        class: AppBundle\Services\LeetFormatter
+        arguments:
+            - '@exercise4.service'
+
+    exercice2.processor:
+        class: AppBundle\Services\MachineNameProcessor
+        arguments:
+            - '@exercise2.service'
+        tags:
+#            - { name: monolog.processor, method: gattai, channel: 'channel_ex2' }
+            - { name: monolog.processor, method: gattai, handler: 'exercise5' }
+
+    processor.git:
+        class: Monolog\Processor\GitProcessor
+        tags:
+            - { name: monolog.processor, method: __invoke, handler: 'exercise5' }

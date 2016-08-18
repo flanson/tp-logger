@@ -1,0 +1,6 @@
+services:
+    handler.forgetfull:
+        class: AppBundle\Services\ForgetFullHandler
+        arguments:
+            - "%kernel.logs_dir%/channel_ex3/%kernel.environment%.log"
+            - 1

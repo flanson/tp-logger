@@ -1,0 +1,5 @@
+monolog:
+        exercise3:
+            type: service
+            id: 'handler.forgetfull'
+

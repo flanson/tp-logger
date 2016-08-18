@@ -1,0 +1,36 @@
+parameters:
+    # None
+
+services:
+    exercise2.fakelog:
+        class: AppBundle\Tools\FakeLogService
+        arguments:
+            - 'exercise 2'
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: channel_ex2 }
+
+    exercise3.fakelog:
+        class: AppBundle\Tools\FakeLogService
+        arguments:
+            - 'exercise 3'
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: channel_ex3 }
+
+    exercise4.fakelog:
+        class: AppBundle\Tools\FakeLogService
+        arguments:
+            - 'exercise 4'
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: channel_ex4 }
+
+    exercise5.fakelog:
+        class: AppBundle\Tools\FakeLogService
+        arguments:
+            - 'exercise 5'
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: channel_ex5 }
+
